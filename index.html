@@ -1,30 +1,58 @@
 <!DOCTYPE html>
-<html lang="en" dir="">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
     <title>Interview Test - Accessible Form Validation</title>
 </head>
 <body>
-    <main>
+    <main class="wrapper">
         <h1>Kevin Bonett:<br>Interview Test</h1>
 
         <form class="form" action="#" data-module="form-validate">
             <div class="form__field">
-                <label for="input-text" class="label">
-                    Text input label
+                <label for="name" class="label">
+                    Your name
                 </label>
                 <input
                     type="text"
-                    id="input-text"
+                    id="name"
                     class="input"
                     required
                 />
             </div>
             <div class="form__field">
+                <label for="email" class="label">
+                    Your email
+                </label>
+                <input
+                    type="email"
+                    id="email"
+                    class="input"
+                    required
+                />
+            </div>
+            <div class="form__field">
+                <label for="date-day" class="label">
+                    Your date of birth
+                </label>
+                <select
+                    class="select"
+                    id="date-day"
+                    required
+                >
+                    <option value="">Please choose...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="form__field">
                 <label for="input-tel" class="label">
-                    Telephone input label
+                    Your phone number
                     <span class="label__subtext">Can include +-() and spaces</span>
                 </label>
                 <input
@@ -35,21 +63,6 @@
                     autocomplete="tel"
                     required
                 />
-            </div>
-            <div class="form__field">
-                <label for="select" class="label">
-                    Select label
-                </label>
-                <select
-                    class="select"
-                    id="select"
-                    required
-                >
-                    <option value="">choose...</option>
-                    <option value="1">option 1</option>
-                    <option value="2">option 2</option>
-                    <option value="3">option 3</option>
-                </select>
             </div>
 
             <div class="button-group">
