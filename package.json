@@ -1,0 +1,57 @@
+{
+    "name": "interview-test-accessible-form-validation",
+    "description": "Interview test (accessible form validation), bundled by Parcel.",
+    "version": "1.0.0",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/basher/interview-test-accessible-form-validation"
+    },
+    "scripts": {
+        "reset": "rm -rf node_modules/ && yarn install",
+        "prestart": "rm -rf .parcel-cache",
+        "start:parcel": "parcel index.html --dist-dir public --port 1234 --open --target app",
+        "start": "yarn install && yarn start:parcel",
+        "prepare": "husky install .husky"
+    },
+    "targets": {
+        "app": {}
+    },
+    "browserslist": [
+        "defaults",
+        "not dead"
+    ],
+    "devDependencies": {
+        "@babel/core": "^7.13.15",
+        "@babel/eslint-parser": "^7.13.14",
+        "@etchteam/storybook-addon-status": "^4.2.2",
+        "@parcel/transformer-sass": "^2.8.3",
+        "@typescript-eslint/eslint-plugin": "^5.41.0",
+        "@typescript-eslint/parser": "^5.41.0",
+        "eslint": "^7.24.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "husky": "^8.0.3",
+        "lint-staged": "^13.2.3",
+        "parcel": "^2.8.3",
+        "postcss": "^8.4.18",
+        "prettier": "^2.7.1",
+        "stylelint": "^14.14.0",
+        "stylelint-config-prettier": "^9.0.3",
+        "stylelint-config-recommended-scss": "^8.0.0",
+        "stylelint-order": "^5.0.0",
+        "stylelint-prettier": "^2.0.0",
+        "typescript": "^4.8.4"
+    },
+    "dependencies": {},
+    "lint-staged": {
+        "src/**/*.ts": [
+            "eslint --fix",
+            "prettier --write"
+        ],
+        "src/**/*.scss": [
+            "stylelint --custom-syntax postcss-scss",
+            "prettier --write"
+        ]
+    }
+}
