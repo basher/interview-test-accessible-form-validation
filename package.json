@@ -12,6 +12,9 @@
         "prestart": "rm -rf .parcel-cache",
         "start:parcel": "parcel index.html --dist-dir public --port 1234 --open --target app",
         "start": "yarn install && yarn start:parcel",
+        "prebuild": "rm -rf .parcel-cache && rm -rf build",
+        "build:parcel": "parcel build index.html --dist-dir build",
+        "build": "yarn install && yarn build:parcel",
         "prepare": "husky install .husky"
     },
     "targets": {
