@@ -2,12 +2,12 @@
 
 ## TODO
 - Fix:
-    - REGEX.
     - Layout.
     - Typography.
-- `yarn start` etc.
-- Linters, etc.
-- Fix build output.
-- Safari 12 support (test JS/CSS output).
+    - Build output (copy to BUILD-STATIC and update paths).
+- Document `yarn start` etc.
+- Document architecture (boilerplate), linters, etc.
+- Test:
+    - Safari 12 support (compiled JS/CSS output).
+    - JS disabled (progressive enhancement).
 - Unit tests.
-- Test with JS disabled (progressive enhancement).

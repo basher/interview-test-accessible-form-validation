@@ -22,6 +22,7 @@
                     id="name"
                     name="name"
                     class="input"
+                    autocomplete="name"
                     required
                 />
             </div>
@@ -42,7 +43,7 @@
                 <fieldset class="fieldset">
                     <legend class="legend">Your date of birth</legend>
                     <div class="flex">
-                        <div>
+                        <div class="form__field">
                             <label for="dob-day" class="label">
                                 Day
                             </label>
@@ -86,7 +87,7 @@
                                 <option value="31">31</option>
                             </select>
                         </div>
-                        <div>
+                        <div class="form__field">
                             <label for="dob-month" class="label">
                                 Month
                             </label>
@@ -111,18 +112,19 @@
                                 <option value="December">December</option>
                             </select>
                         </div>
-                        <div>
+                        <div class="form__field">
                             <label for="dob-year" class="label">
                                 Year
                             </label>
                             <input
-                                type="text"
+                                type="number"
                                 id="dob-year"
                                 name="dob-year"
                                 class="input"
-                                minlength="4"
-                                maxlength="4"
-                                pattern="^\d{4}$"
+                                min="1900"
+                                max="2100"
+                                step="1"
+                                autocomplete="bday-year"
                                 required
                             />
                         </div>
@@ -132,14 +134,14 @@
             <div class="form__field">
                 <label for="telephone" class="label">
                     Your phone number
-                    <span class="label__subtext">Can include +-() and spaces</span>
+                    <span class="label__subtext">e.g. 07700 111111, 020 1111 1111, with or without spaces</span>
                 </label>
                 <input
                     type="tel"
                     id="telephone"
                     name="telephone"
                     class="input"
-                    pattern="^((?![a-zA-Z])[\\d\\-\\+\\s\\(\\)])+$"
+                    pattern="^\d{3,5}\s?\d{3,4}\s?\d{3,4}$"
                     autocomplete="tel"
                     required
                 />
