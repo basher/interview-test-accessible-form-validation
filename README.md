@@ -2,9 +2,8 @@
 
 ## TODO
 - Fix:
-    - Layout.
-    - Typography.
-    - Build output (copy to BUILD-STATIC and update paths).
+    - Remove redundant CSS.
+    - Build output (CORS error with local JS file).
 - Document `yarn start` etc.
 - Document architecture (boilerplate), linters, etc.
 - Test:
