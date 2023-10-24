@@ -7,6 +7,6 @@
 - Document `yarn start` etc.
 - Document architecture (boilerplate), linters, etc.
 - Test:
-    - Safari 12 support (compiled JS/CSS output).
+    - Safari 12 support (compiled JS/CSS output, PostCSS).
     - JS disabled (progressive enhancement).
 - Unit tests.
