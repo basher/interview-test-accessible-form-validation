@@ -132,7 +132,6 @@
                                     name="dob-year"
                                     class="input"
                                     min="1900"
-                                    max="2100"
                                     step="1"
                                     autocomplete="bday-year"
                                     required
@@ -176,12 +175,31 @@
 
             <section>
                 <h2>Saved details</h2>
-                <div
+                <!-- <div
                     role="region"
                     aria-live="polite"
                     data-target="process-users"
                 >
-                </div>
+                </div> -->
+
+                <div
+                    class="table-wrapper"
+                    role="region"
+                    tabindex="0"
+                >
+                    <table class="table">
+                        <caption class="sr-only">Saved details</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Date of birth</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody data-target="process-users"></tbody>
+                    </table>
             </section>
 
         </main>

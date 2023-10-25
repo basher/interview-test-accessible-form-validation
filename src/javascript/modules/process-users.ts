@@ -21,23 +21,12 @@ export default class ProcessUsers {
     }
 
     private init(): void {
-        this.buildResultsDOM();
         this.form.addEventListener('submit', (e: SubmitEvent) =>
             this.handleSubmit(e),
         );
         this.form.addEventListener('formdata', (e: FormDataEvent) =>
             this.handleFormData(e),
         );
-    }
-
-    private buildResultsDOM(): void {
-        const formDataContainer = document.querySelector(
-            '[data-target="process-users"]',
-        ) as HTMLDivElement;
-        const ul = document.createElement('ul');
-
-        ul.classList.add('user-details');
-        formDataContainer.appendChild(ul);
     }
 
     private handleSubmit(e: SubmitEvent): void {
@@ -50,23 +39,34 @@ export default class ProcessUsers {
 
     private handleFormData(e: FormDataEvent): void {
         const formDataContainer = document.querySelector(
-            '.user-details',
-        ) as HTMLUListElement;
-        const li = document.createElement('li');
+            '[data-target="process-users"]',
+        ) as HTMLTableSectionElement;
+        const tr = document.createElement('tr');
 
         if (formDataContainer) {
-            li.innerHTML += `<span class="sr-only">New user added</span>`;
+            let dob = '';
 
             for (const entry of e.formData.entries()) {
-                li.innerHTML += `
-                    <span>
-                        <span class="sr-only">${entry[0]}</span>
-                        ${entry[1]}&nbsp;
-                    </span>
-                `;
+                // Combine 3 date of birth entries into 1 string.
+                switch (entry[0]) {
+                    case 'dob-day':
+                        dob += `${entry[1]} `;
+                        break;
+                    case 'dob-month':
+                        dob += `${entry[1]} `;
+                        break;
+                    case 'dob-year':
+                        dob += `${entry[1]}`;
+                        tr.innerHTML += `<td>${dob}</td>`;
+                        break;
+                    default:
+                        tr.innerHTML += `<td>${entry[1]}</td>`;
+                        break;
+                }
             }
 
-            formDataContainer.appendChild(li);
+            tr.innerHTML += `<td>Delete</td>`;
+            formDataContainer.appendChild(tr);
         }
     }
 }
