@@ -205,9 +205,28 @@
             <hr>
 
             <div class="stack wysiwyg">
-                <h2>Implementation details</h2>
+                <h2>Some notes on implementation details</h2>
+
+                <ul>
+                    <li><a href="https://parceljs.org/">Parcel</a> has been used to bundle the CSS / JS.</li>
+                    <li>HTML / CSS / TypeScript architecture and methodologies are taken from my own <a href="https://basher.github.io/Web-UI-Boilerplate/">UI boilerplate</a>.</li>
+                    <li>Code linters and Git commit hooks have been configured.</li>
+                    <li>Safari 12+ support has been implemented via a Browserslist config in "package.json".</li>
+                </ul>
+
+                <h3>Functional behaviour</h3>
+                <ul>
+                    <li>Functionality has been tested in Firefox / Chrome / Edge on Windows 10.</li>
+                    <li>Unfortunately, Safari 12 could not be tested using the "BrowserStackLocal" desktop app. However, the transpiled JS should work, and any cutting-edge CSS from my UI boilerplate has been simplified where necessary.</li>
+                    <li>The form validation works progressively (i.e. native HTML validation occurs if JS is disabled), but because there is no back-end or API to work with, the user data does not persist on page reload.</li>
+                </ul>
+
                 <h3>Accessibility considerations</h3>
-                <h3>Responsive behaviour</h3>
+                <ul>
+                    <li>Tested with keyboard, NVDA, AxeCore devtools plugin.</li>
+                    <li>A visually hidden "aria-live" region has been added for the add/remove users functionality to confirm the actions have succeeded.</li>
+                    <li>Dark mode has been implemented.</li>
+                </ul>
             </div>
         </main>
     </div>
