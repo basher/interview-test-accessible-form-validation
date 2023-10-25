@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 export default class FormValidate {
     private form: HTMLFormElement;
     private errorFieldClass: string;
@@ -18,6 +16,7 @@ export default class FormValidate {
             '[data-module="form-validate"]',
         );
 
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         [...(forms as any)].forEach((form) => {
             const instance = new FormValidate(form);
             return instance;

@@ -25,7 +25,9 @@ html {
     text-size-adjust: none;
 }
 
-:where(*, *::after, *::before) {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
 }
 
@@ -37,33 +39,27 @@ html {
     vertical-align: baseline;
 }
 
-:is(html, body) {
+html,
+body {
     // Smooth scrolling IF user doesn't have a preference due to motion sensitivities.
     @media (prefers-reduced-motion: no-preference) {
         scroll-behavior: smooth;
     }
     background-color: $color-background;
     color: $base-color;
-    min-block-size: 100vh; // 100dvb might have performance implications.
+    min-block-size: 100vh;
 }
 
-:is(ol, ul)[class] {
+ul[class] {
     list-style: none;
 }
 
-ol ol {
-    list-style-type: lower-alpha;
-}
-
-ol ol ol {
-    list-style-type: lower-roman;
-}
-
-:is(ol, ul):not([class]) {
+ul:not([class]) {
     padding-inline-start: $gutter-l;
 }
 
-:where([type='submit'], label) {
+[type='submit'],
+label {
     cursor: pointer;
 }
 
@@ -72,32 +68,16 @@ table {
     border-spacing: 0;
 }
 
-img {
-    @media (prefers-color-scheme: dark) {
-        opacity: 0.8;
-        transition: opacity $animation-slow;
-
-        &:hover {
-            opacity: 1;
-        }
-    }
-    block-size: auto; // Needed for overriding 'height' attribute in HTML.
-    display: block;
-    max-inline-size: 100%; // Needed for responsive widths.
-}
-
-svg {
-    flex-shrink: 0; // Stop icon shrinking when inside a flex container.
-    max-inline-size: 100%;
-}
-
-:is(input, textarea, select) {
+input,
+textarea,
+select {
     color: inherit;
     vertical-align: middle;
 }
 
 // <a> needs to be included here to remove the default tab focus.
-:is(button, a) {
+button,
+a {
     appearance: none;
     cursor: pointer;
     -webkit-tap-highlight-color: hsl(0 0% 0% / 0%);
@@ -112,17 +92,6 @@ button {
 a:not([class]) {
     @include focus;
     color: inherit;
-}
-
-:is(sub, sup) {
-    vertical-align: revert;
-}
-
-iframe {
-    border: 0;
-    display: block;
-    margin: 0 auto;
-    max-inline-size: 100%;
 }
 
 hr {

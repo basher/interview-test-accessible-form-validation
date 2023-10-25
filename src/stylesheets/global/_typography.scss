@@ -23,43 +23,29 @@ body {
     font-family: $base-font-family;
 }
 
-:where(h1, h2, h3, h4, h5, h6, [class*='h--']) {
+h1,
+h2,
+h3,
+[class*='h--'] {
     font-family: $base-font-family-title;
 }
 
-.h--xl {
-    @include fluid-type($font-size-h1, $font-size-xl, $line-height-xl);
-    margin-block-end: $gutter-clamp-xl;
-}
-
-:where(h1, .h--1) {
+h1,
+.h--1 {
     @include fluid-type($font-size-h2, $font-size-h1, $line-height-h1);
     margin-block-end: $gutter-clamp-l;
 }
 
-:where(h2, .h--2) {
+h2,
+.h--2 {
     @include fluid-type($font-size-h3, $font-size-h2, $line-height-h2);
     margin-block-end: $gutter-m;
 }
 
-:where(h3, .h--3) {
+h3,
+.h--3 {
     @include fluid-type($font-size-h4, $font-size-h3, $line-height-h3);
     margin-block-end: $gutter-m;
-}
-
-:where(h4, .h--4) {
-    @include fluid-type($font-size-h5, $font-size-h4, $line-height-h4);
-    margin-block-end: $gutter-s;
-}
-
-:where(h5, .h--5) {
-    font-size: $font-size-h5;
-    margin-block-end: $gutter-xs;
-}
-
-:where(h6, .h--6) {
-    font-size: $font-size-h6;
-    margin-block-end: $gutter-xs;
 }
 
 /*
@@ -67,7 +53,8 @@ body {
 Margins on other prose elements.
 ----------------------------------------------------------------------------
 */
-:where(p, :is(ul, ol):not([class])) {
+p,
+ul:not([class]) {
     margin-block-end: $gutter-m;
 }
 
@@ -89,24 +76,21 @@ Validation styles.
 Miscellaneous styles.
 ----------------------------------------------------------------------------
 */
-:where(:is(p, li):not([class]), dd, small) {
+p:not([class]),
+li:not([class]) {
     max-inline-size: $max-line-length;
 }
 
-:is(button, input, select, textarea, datalist, datalist > option) {
+button,
+input,
+select {
     font: inherit;
     line-height: 1;
 }
 
-:is(caption, th, td) {
+caption,
+th,
+td {
     font-weight: normal;
     text-align: start;
-}
-
-address {
-    font-style: normal;
-}
-
-small {
-    font-size: $font-size-s;
 }

@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 export default class ProcessUsers {
     private form: HTMLFormElement;
     private formDataContainer: HTMLTableSectionElement | null;
@@ -20,6 +18,7 @@ export default class ProcessUsers {
             '[data-action="process-users"]',
         );
 
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         [...(forms as any)].forEach((form) => {
             const instance = new ProcessUsers(form);
             return instance;
