@@ -27,6 +27,9 @@ export default class ProcessUsers {
         this.form.addEventListener('formdata', (e: FormDataEvent) =>
             this.handleFormData(e),
         );
+        document.addEventListener('click', (e: MouseEvent) => {
+            this.handleClick(e);
+        });
     }
 
     private handleSubmit(e: SubmitEvent): void {
@@ -65,8 +68,28 @@ export default class ProcessUsers {
                 }
             }
 
-            tr.innerHTML += `<td>Delete</td>`;
+            tr.innerHTML += `
+                <td>
+                    <button
+                        type="button"
+                        class="button button--text button--negative button--small"
+                        data-button="delete-user"
+                    >
+                        Delete
+                    </button>
+                </td>
+            `;
+
             formDataContainer.appendChild(tr);
         }
+    }
+
+    private handleClick(e: MouseEvent): void {
+        const target = e.target as HTMLElement;
+        if (target.dataset.button !== 'delete-user') {
+            return;
+        }
+
+        target.closest('tr')?.remove();
     }
 }
