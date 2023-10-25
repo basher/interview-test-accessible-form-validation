@@ -12,11 +12,12 @@
     - Add `.txt` suffix to JS files.
 2. Fix:
     - Remove redundant CSS.
+    - Tweak styles (e.g. font sizes, form field widths).
 3. Document:
     - `yarn start` etc.
     - Architecture (boilerplate, linters, etc).
-    - Persist data (e.g. API).
+    - JS disabled (progressive enhancement) form posts, but no data persists (could have used local storage for UI?).
+    - a11y (added visually hidden aria-live for add/remove users).
 4. Test:
     - Safari 12 support.
-    - JS disabled (progressive enhancement).
 5. Unit tests.

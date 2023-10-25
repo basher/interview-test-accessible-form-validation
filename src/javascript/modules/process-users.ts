@@ -2,9 +2,15 @@
 
 export default class ProcessUsers {
     private form: HTMLFormElement;
+    private formDataContainer: HTMLTableSectionElement | null;
+    private alert: HTMLDivElement | null;
 
     constructor(form: HTMLFormElement) {
         this.form = form;
+        this.formDataContainer = document.querySelector(
+            '[data-target="process-users"]',
+        );
+        this.alert = document.querySelector('[data-alert="process-users"]');
 
         this.init();
     }
@@ -41,12 +47,9 @@ export default class ProcessUsers {
     }
 
     private handleFormData(e: FormDataEvent): void {
-        const formDataContainer = document.querySelector(
-            '[data-target="process-users"]',
-        ) as HTMLTableSectionElement;
         const tr = document.createElement('tr');
 
-        if (formDataContainer) {
+        if (this.formDataContainer) {
             let dob = '';
 
             for (const entry of e.formData.entries()) {
@@ -75,12 +78,17 @@ export default class ProcessUsers {
                         class="button button--text button--negative button--small"
                         data-button="delete-user"
                     >
-                        Delete
+                        Delete user
                     </button>
                 </td>
             `;
 
-            formDataContainer.appendChild(tr);
+            this.formDataContainer.appendChild(tr);
+
+            // Alert screen reader that user has been added.
+            if (this.alert) {
+                this.alert.innerHTML = 'User details added successfully';
+            }
         }
     }
 
@@ -91,5 +99,10 @@ export default class ProcessUsers {
         }
 
         target.closest('tr')?.remove();
+
+        // Alert screen reader that user has been deleted.
+        if (this.alert) {
+            this.alert.innerHTML = 'User details deleted successfully';
+        }
     }
 }
