@@ -10,9 +10,8 @@
 </head>
 <body>
     <div class="wrapper u-p-block--l">
-        <main class="stack">
+        <main class="stack stack--gutter-xl">
             <h1>Kevin Bonett:<br>Interview Test</h1>
-            <h2>Please fill out your details</h2>
 
             <form
                 class="form"
@@ -20,6 +19,8 @@
                 data-module="form-validate"
                 data-action="process-users"
             >
+                <h2 class="u-m-block--0">Please enter your details</h2>
+
                 <div class="form__field">
                     <label for="name" class="label">
                         Name
@@ -47,7 +48,7 @@
                         required
                     />
                 </div>
-<!--
+
                 <div class="form__field">
                     <fieldset class="fieldset">
                         <legend class="legend">Date of birth</legend>
@@ -142,21 +143,21 @@
                 </div>
 
                 <div class="form__field">
-                    <label for="telephone" class="label">
+                    <label for="phone" class="label">
                         Phone number
                         <span class="label__subtext">UK number, between 9 and 13 digits, can include spaces</span>
                     </label>
                     <input
                         type="tel"
-                        id="telephone"
-                        name="telephone"
+                        id="phone"
+                        name="phone"
                         class="input"
                         pattern="^\d{3,5}\s?\d{3,4}\s?\d{3,4}$"
                         autocomplete="tel"
                         required
                     />
                 </div>
--->
+
                 <div class="button-group">
                     <button
                         type="submit"
@@ -173,7 +174,15 @@
                 </div>
             </form>
 
-            <h2>Saved details</h2>
+            <section>
+                <h2>Saved details</h2>
+                <div
+                    role="region"
+                    aria-live="polite"
+                    data-target="process-users"
+                >
+                </div>
+            </section>
 
         </main>
     </div>

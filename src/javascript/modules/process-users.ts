@@ -21,19 +21,52 @@ export default class ProcessUsers {
     }
 
     private init(): void {
-        this.form.addEventListener('submit', () => this.handleSubmit());
+        this.buildResultsDOM();
+        this.form.addEventListener('submit', (e: SubmitEvent) =>
+            this.handleSubmit(e),
+        );
         this.form.addEventListener('formdata', (e: FormDataEvent) =>
             this.handleFormData(e),
         );
     }
 
-    private handleSubmit(): void {
+    private buildResultsDOM(): void {
+        const formDataContainer = document.querySelector(
+            '[data-target="process-users"]',
+        ) as HTMLDivElement;
+        const ul = document.createElement('ul');
+
+        ul.classList.add('user-details');
+        formDataContainer.appendChild(ul);
+    }
+
+    private handleSubmit(e: SubmitEvent): void {
+        e.preventDefault();
+
         if (this.form.checkValidity()) {
             new FormData(this.form);
         }
     }
 
     private handleFormData(e: FormDataEvent): void {
-        console.log('formdata fired', e.formData);
+        const formDataContainer = document.querySelector(
+            '.user-details',
+        ) as HTMLUListElement;
+        const li = document.createElement('li');
+
+        if (formDataContainer) {
+            li.innerHTML += `<span class="sr-only">New user added</span>`;
+
+            for (const entry of e.formData.entries()) {
+                li.innerHTML += `
+                    <span>
+                        <span class="sr-only">${entry[0]}</span>
+                        ${entry[1]}&nbsp;
+                    </span>
+                `;
+            }
+
+            formDataContainer.appendChild(li);
+        }
     }
 }

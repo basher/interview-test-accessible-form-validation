@@ -7,12 +7,16 @@
 - Simply open `STATIC_BUILD/index.html` in browser.
 
 ## TODO
-1. Copy `build` to `STATIC_BUILD`. Edit `index.html`. Add `.txt` suffix to JS files.
+1. Copy `build` to `STATIC_BUILD`.
+    - Edit `index.html`.
+    - Add `.txt` suffix to JS files.
 2. Fix:
     - Remove redundant CSS.
-3. Document `yarn start` etc.
-4. Document architecture - boilerplate, linters, etc.
-5. Test:
+3. Document:
+    - `yarn start` etc.
+    - Architecture (boilerplate, linters, etc).
+    - Persist data (e.g. API).
+4. Test:
     - Safari 12 support.
     - JS disabled (progressive enhancement).
-6. Unit tests.
+5. Unit tests.
