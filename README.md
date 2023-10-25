@@ -4,7 +4,7 @@ To run the test, do one of the following:
 ## 1. Install and run Node dependencies
 - Node 16 is required as a minimum - see https://nodejs.org/en/download.
 - Run `npm install --global yarn` - installs Yarn if you don't already have it.
-- Run `yarn start` - sets project dependencies, starts Parcel dev server and launches the website at http://localhost:4321/.
+- Run `yarn start` - installs project dependencies, starts Parcel dev server, and launches the website at http://localhost:4321/.
 
 ## 2. View static version of BUILD output
 > - No need to run `yarn` commands.
