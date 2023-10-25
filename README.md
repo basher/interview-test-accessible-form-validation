@@ -1,26 +1,14 @@
-# Interview Test - Accessible Form Validation
+# Interview Test - Accessible Form Handling & Validation
+To run the test, do one of the following:
 
-## View static version of BUILD output.
+## 1. Install and run Node dependencies
+- Node 16 is required as a minimum - see https://nodejs.org/en/download.
+- Run `npm install --global yarn` - installs Yarn if you don't already have it.
+- Run `yarn start` - sets project dependencies, starts Parcel dev server and launches the website at http://localhost:4321/.
+
+## 2. View static version of BUILD output
 > - No need to run `yarn` commands.
-> - I have copied the Parcel bundler generated `build` output to the `STATIC_BUILD` folder, edited `index.html` to fix CSS/JS relative file paths, and removed `type="module"` from the script bundle to resolve CORS error when trying to execute JS locally from the file system.
-- Please remove the `.txt` suffix from JS file.
-- Then open `STATIC_BUILD/index.html` in a browser.
-
-## TODO
-1. Copy `build` to `STATIC_BUILD`.
-    - Edit `index.html`.
-    - Add `.txt` suffix to JS files.
-2. Fix:
-    - Remove redundant CSS.
-    - Tweak styles.
-3. Document:
-    - `yarn start` etc.
-    - Architecture (boilerplate, linters, etc).
-    - JS disabled (progressive enhancement) form posts, but no data persists (could have used local storage for UI?).
-    - a11y (added visually hidden aria-live for add/remove users).
-    - a11y (tested with keyboard, NVDA, AxeCore).
-    - Functionality tested in Firefox/Chrome/Edge on Windows 10.
-    - Unable to test in Safari 12 using BrowserStackLocal desktop app.
-4. Test:
-    - Safari 12 support.
-5. Unit tests.
+> - The Parcel bundler generated `build` output has been copied to the `STATIC_BUILD` folder.
+> - `index.html` has been edited to fix CSS/JS relative file paths, and `type="module"` has been removed from the script bundle to resolve CORS error when trying to execute JS locally from the file system.
+- Remove the `.txt` suffix from JS file.
+- Open `STATIC_BUILD/index.html` in a browser.
