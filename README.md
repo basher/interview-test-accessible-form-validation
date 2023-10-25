@@ -18,6 +18,7 @@
     - Architecture (boilerplate, linters, etc).
     - JS disabled (progressive enhancement) form posts, but no data persists (could have used local storage for UI?).
     - a11y (added visually hidden aria-live for add/remove users).
+    - a11y (tested with keyboard, NVDA, AxeCore).
 4. Test:
     - Safari 12 support.
 5. Unit tests.
