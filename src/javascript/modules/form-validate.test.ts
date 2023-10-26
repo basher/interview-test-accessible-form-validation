@@ -5,6 +5,9 @@ jest.mock('./form-validate');
 describe('Validate form', () => {
     document.body.innerHTML = `
         <form data-module="form-validate">
+            <label for="name">Name</label>
+            <input type="text" id="name" required />
+            <button type="submit">Add user</button>
         </form>
     `;
 
@@ -12,8 +15,15 @@ describe('Validate form', () => {
         '[data-module="form-validate"]',
     ) as HTMLFormElement;
 
-    it('should have been called once', () => {
+    test('Class should have been called once', () => {
         new FormValidate(form);
         expect(FormValidate).toHaveBeenCalledTimes(1);
+    });
+
+    test('Class should have been called once', () => {
+        new FormValidate(form);
+        form.submit();
+        const input = form.querySelector('#name') as HTMLInputElement;
+        expect(input?.validity.valid).toBe(false);
     });
 });

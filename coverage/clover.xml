@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1698330897979" clover="3.2.0">
-  <project timestamp="1698330897979" name="All files">
+<coverage generated="1698332739105" clover="3.2.0">
+  <project timestamp="1698332739105" name="All files">
     <metrics statements="83" coveredstatements="0" conditionals="28" coveredconditionals="0" methods="22" coveredmethods="0" elements="133" coveredelements="0" complexity="0" loc="83" ncloc="83" packages="1" files="2" classes="2"/>
     <file name="form-validate.ts" path="C:\Users\kev\Documents\work\Projects\interview-test-accessible-form-validation\src\javascript\modules\form-validate.ts">
       <metrics statements="42" coveredstatements="0" conditionals="14" coveredconditionals="0" methods="12" coveredmethods="0"/>
