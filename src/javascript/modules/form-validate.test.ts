@@ -1,7 +1,5 @@
 import FormValidate from './form-validate';
 
-jest.mock('./form-validate');
-
 describe('Validate form', () => {
     document.body.innerHTML = `
         <form data-module="form-validate">
@@ -14,11 +12,6 @@ describe('Validate form', () => {
     const form = document.querySelector(
         '[data-module="form-validate"]',
     ) as HTMLFormElement;
-
-    test('Class should have been called once', () => {
-        new FormValidate(form);
-        expect(FormValidate).toHaveBeenCalledTimes(1);
-    });
 
     test('Invalid input value on form submission', () => {
         new FormValidate(form);
