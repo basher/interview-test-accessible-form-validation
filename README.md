@@ -1,7 +1,7 @@
 # Interview Test - Accessible Form Handling & Validation
 To run the test, do one of the following:
 
-## 1. Install and run Node dependencies
+## 1. Install and run project dependencies
 - Node 16 is required as a minimum - see https://nodejs.org/en/download.
 - Run `npm install --global yarn` - installs Yarn if you don't already have it.
 - Run `yarn start` - installs project dependencies, starts Parcel dev server, and launches the website at http://localhost:4321/.
