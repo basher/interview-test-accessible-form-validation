@@ -16,7 +16,8 @@
         "build:parcel": "parcel build index.html --dist-dir build",
         "build": "yarn install && yarn build:parcel",
         "prepare": "husky install .husky",
-        "test": "jest"
+        "test": "jest",
+        "coverage": "jest --coverage"
     },
     "targets": {
         "app": {}
