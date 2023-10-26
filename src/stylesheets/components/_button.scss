@@ -13,21 +13,6 @@ Dependencies.
         border: $border-width-s solid;
     }
 
-    &--text-icon {
-        align-items: center;
-        display: inline-flex;
-        gap: $gutter-s;
-        justify-content: space-between;
-
-        span {
-            text-align: start;
-        }
-    }
-
-    &--reverse {
-        flex-direction: row-reverse;
-    }
-
     // Apply colours to button variants.
     &--primary {
         background-color: $color-brand;
@@ -75,12 +60,6 @@ Dependencies.
         &[class*='text'] {
             border-color: $color-error;
         }
-    }
-
-    &--icon {
-        align-items: center;
-        display: inline-flex;
-        justify-content: center;
     }
 
     // Text (and text + icons) buttons only. Icon button sizes are determined by the context of their parent container font-size (or their icon size overrides).

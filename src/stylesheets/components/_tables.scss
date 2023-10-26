@@ -8,7 +8,8 @@ Dependencies.
 
 // Define mixin so tables inside WYSIWYG can be styled without requiring CSS class to be added.
 @mixin table {
-    :is(th, td) {
+    th,
+    td {
         border: $border-width-s solid hsl(var(--color-neutral-900) / 10%);
         padding: $gutter-m;
 

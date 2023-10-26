@@ -1,5 +1,9 @@
 {
     "plugins": {
-        "postcss-clamp": {}
+        "postcss-clamp": {},
+        "postcss-logical": {
+            "preserve": "true"
+        },
+        "postcss-dir-pseudo-class": {}
     }
 }
