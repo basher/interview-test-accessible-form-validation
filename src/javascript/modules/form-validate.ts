@@ -46,6 +46,7 @@ export default class FormValidate {
         if (!this.form.checkValidity()) {
             e.preventDefault();
 
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             [...(this.form.elements as any)].forEach((field) => {
                 if (!field.checkValidity()) {
                     this.showError(field);
@@ -62,6 +63,7 @@ export default class FormValidate {
 
     private handleBlur(e: Event): void {
         // Need to use 'any' type as 'checkValidity' & 'type' properties do not exist on 'HTMLElement'.
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const field = e.target as any;
 
         // If field is valid, remove any errors.
@@ -73,6 +75,7 @@ export default class FormValidate {
         }
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     private showError(field: any): void {
         const errorMsg = document.createElement('span');
         const fieldWrapper = field.closest('.form__field');
@@ -92,6 +95,7 @@ export default class FormValidate {
         field.setAttribute('aria-describedby', errorMsg.id);
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     private removeError(field: any): void {
         const fieldWrapper = field.closest('.form__field');
         const errorMsg = fieldWrapper.querySelector(`.${this.errorMsgClass}`);

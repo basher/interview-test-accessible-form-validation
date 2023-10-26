@@ -26,6 +26,7 @@ body {
 h1,
 h2,
 h3,
+h4,
 [class*='h--'] {
     font-family: $base-font-family-title;
 }
@@ -46,6 +47,12 @@ h3,
 .h--3 {
     @include fluid-type($font-size-h4, $font-size-h3, $line-height-h3);
     margin-block-end: $gutter-m;
+}
+
+h4,
+.h--4 {
+    @include fluid-type($font-size-h5, $font-size-h4, $line-height-h4);
+    margin-block-end: $gutter-s;
 }
 
 /*

@@ -209,7 +209,7 @@
 
                 <ul>
                     <li><a href="https://parceljs.org/">Parcel</a> has been used to bundle the CSS / JS.</li>
-                    <li>HTML / CSS / TypeScript architecture and methodologies are taken from my own <a href="https://basher.github.io/Web-UI-Boilerplate/">UI boilerplate</a>.</li>
+                    <li>HTML / CSS / TypeScript architecture and methodologies have been implemented as per my own <a href="https://basher.github.io/Web-UI-Boilerplate/">UI boilerplate / Storybook component library</a>.</li>
                     <li>Code linters and Git commit hooks have been configured.</li>
                     <li>Safari 12+ support has been implemented via a Browserslist config in "package.json".</li>
                 </ul>
@@ -217,9 +217,16 @@
                 <h3>Functional behaviour</h3>
                 <ul>
                     <li>Functionality has been tested in Firefox / Chrome / Edge on Windows 10.</li>
-                    <li>Unfortunately, Safari 12 could not be tested using the "BrowserStackLocal" desktop app. However, the transpiled JS should work.</li>
                     <li>The form validation works progressively (i.e. native HTML validation occurs if JS is disabled).</li>
                     <li>As there is no back-end or API to work with, the user data has not been persisted (e.g. with local storage) on page reload.</li>
+                </ul>
+
+                <h4>Safari 12 testing</h4>
+                <ul>
+                    <li>Unfortunately, Safari 12 could not be fully tested using trial versions of the BrowserStackLocal desktop app, or LambdaTest tunnel for localhost websites.</li>
+                    <li>Access to localhost could not be established, or the trial expired or timed out before testing was completed.</li>
+                    <li>I was able to confirm that the form validation worked, but nothing more.</li>
+                    <li>NOTE: The JS / CSS APIs that have been used have either been polyfilled, or are fully supported already.</li>
                 </ul>
 
                 <h3>Accessibility considerations</h3>
