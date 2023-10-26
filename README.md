@@ -1,6 +1,6 @@
 # Interview Test - Accessible Form Handling & Validation
 
-## Project prerequisites
+## Project pre-requisites
 - Node 16 is required as a minimum - see https://nodejs.org/en/download.
 - `npm install --global yarn` - installs Yarn if not already installed.
 
@@ -11,4 +11,4 @@
 ## Testing with Jest
 - `yarn test`.
 
-> NOTE: Parcel doesn't use Babel for transpilation, unlike Jest, so [.parcelrc config](https://parceljs.org/languages/javascript/#usage-with-other-tools) has been added. Parcel now ignores `.babelrc.json` config.
+> NOTE: Parcel doesn't use Babel for transpilation, unlike Jest. Parcel ignores the `.babelrc.json` config via the [addition of a .parcelrc config](https://parceljs.org/languages/javascript/#usage-with-other-tools).
