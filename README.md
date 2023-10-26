@@ -1,17 +1,14 @@
 # Interview Test - Accessible Form Handling & Validation
-To view the web app, do one of the following:
 
-## 1. Install and run project dependencies
+## Project prerequisites
 - Node 16 is required as a minimum - see https://nodejs.org/en/download.
-- Run `npm install --global yarn` - installs Yarn if you don't already have it.
-- Run `yarn start` - installs project dependencies, starts Parcel dev server, and launches the app at http://localhost:4321/.
+- `npm install --global yarn` - installs Yarn if not already installed.
 
-## 2. View static version of BUILD output
-> - No need to run the commands above.
-> - The Parcel bundler generated `build` output has been copied to the `STATIC_BUILD` folder.
-> - `index.html` has been edited to fix CSS/JS relative file paths, and `type="module"` has been removed from the script bundle to resolve CORS error when trying to execute JS locally from the file system.
-- Remove the `.txt` suffix from JS file.
-- Open `STATIC_BUILD/index.html` in a browser.
+## View website in a browser
+- `yarn start` - installs project dependencies (if not already installed), starts Parcel dev server, and launches the website at http://localhost:4321/.
 
-## Testing the app with Jest
-- Run `yarn test`.
+
+## Testing with Jest
+- `yarn test`.
+
+> NOTE: Parcel doesn't use Babel for transpilation, unlike Jest, so [.parcelrc config](https://parceljs.org/languages/javascript/#usage-with-other-tools) has been added. Parcel now ignores `.babelrc.json` config.
