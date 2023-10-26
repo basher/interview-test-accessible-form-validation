@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1698330044826" clover="3.2.0">
-  <project timestamp="1698330044827" name="All files">
-    <metrics statements="42" coveredstatements="0" conditionals="14" coveredconditionals="0" methods="12" coveredmethods="0" elements="68" coveredelements="0" complexity="0" loc="42" ncloc="42" packages="1" files="1" classes="1"/>
+<coverage generated="1698330897979" clover="3.2.0">
+  <project timestamp="1698330897979" name="All files">
+    <metrics statements="83" coveredstatements="0" conditionals="28" coveredconditionals="0" methods="22" coveredmethods="0" elements="133" coveredelements="0" complexity="0" loc="83" ncloc="83" packages="1" files="2" classes="2"/>
     <file name="form-validate.ts" path="C:\Users\kev\Documents\work\Projects\interview-test-accessible-form-validation\src\javascript\modules\form-validate.ts">
       <metrics statements="42" coveredstatements="0" conditionals="14" coveredconditionals="0" methods="12" coveredmethods="0"/>
       <line num="7" count="0" type="stmt"/>
@@ -46,6 +46,50 @@
       <line num="104" count="0" type="stmt"/>
       <line num="105" count="0" type="stmt"/>
       <line num="106" count="0" type="stmt"/>
+    </file>
+    <file name="process-users.ts" path="C:\Users\kev\Documents\work\Projects\interview-test-accessible-form-validation\src\javascript\modules\process-users.ts">
+      <metrics statements="41" coveredstatements="0" conditionals="14" coveredconditionals="0" methods="10" coveredmethods="0"/>
+      <line num="7" count="0" type="stmt"/>
+      <line num="8" count="0" type="stmt"/>
+      <line num="11" count="0" type="stmt"/>
+      <line num="13" count="0" type="stmt"/>
+      <line num="17" count="0" type="stmt"/>
+      <line num="22" count="0" type="stmt"/>
+      <line num="23" count="0" type="stmt"/>
+      <line num="24" count="0" type="stmt"/>
+      <line num="29" count="0" type="stmt"/>
+      <line num="30" count="0" type="stmt"/>
+      <line num="32" count="0" type="stmt"/>
+      <line num="33" count="0" type="stmt"/>
+      <line num="35" count="0" type="stmt"/>
+      <line num="36" count="0" type="stmt"/>
+      <line num="41" count="0" type="stmt"/>
+      <line num="43" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="44" count="0" type="stmt"/>
+      <line num="49" count="0" type="stmt"/>
+      <line num="51" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="52" count="0" type="stmt"/>
+      <line num="54" count="0" type="stmt"/>
+      <line num="56" count="0" type="cond" truecount="0" falsecount="4"/>
+      <line num="58" count="0" type="stmt"/>
+      <line num="59" count="0" type="stmt"/>
+      <line num="61" count="0" type="stmt"/>
+      <line num="62" count="0" type="stmt"/>
+      <line num="64" count="0" type="stmt"/>
+      <line num="65" count="0" type="stmt"/>
+      <line num="66" count="0" type="stmt"/>
+      <line num="68" count="0" type="stmt"/>
+      <line num="69" count="0" type="stmt"/>
+      <line num="73" count="0" type="stmt"/>
+      <line num="85" count="0" type="stmt"/>
+      <line num="88" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="89" count="0" type="stmt"/>
+      <line num="95" count="0" type="stmt"/>
+      <line num="96" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="97" count="0" type="stmt"/>
+      <line num="100" count="0" type="stmt"/>
+      <line num="103" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="104" count="0" type="stmt"/>
     </file>
   </project>
 </coverage>

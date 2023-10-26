@@ -17,7 +17,7 @@
         "build": "yarn install && yarn build:parcel",
         "prepare": "husky install .husky",
         "test": "jest",
-        "coverage": "jest --coverage"
+        "coverage": "jest --clearCache && jest --coverage"
     },
     "targets": {
         "app": {}
