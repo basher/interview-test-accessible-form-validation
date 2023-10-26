@@ -10,7 +10,7 @@
     "scripts": {
         "reset": "rm -rf node_modules/ && yarn install",
         "prestart": "rm -rf .parcel-cache",
-        "start:parcel": "parcel index.html --dist-dir public --port 4321 --open --target app",
+        "start:parcel": "parcel index.html --port 4321 --open --target app",
         "start": "yarn install && yarn start:parcel",
         "prebuild": "rm -rf .parcel-cache && rm -rf build",
         "build:parcel": "parcel build index.html --dist-dir build",
@@ -40,6 +40,7 @@
         "lint-staged": "^13.2.3",
         "parcel": "^2.8.3",
         "postcss": "^8.4.18",
+        "postcss-clamp": "^4.1.0",
         "prettier": "^2.7.1",
         "stylelint": "^14.14.0",
         "stylelint-config-prettier": "^9.0.3",

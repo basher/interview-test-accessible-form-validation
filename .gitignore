@@ -1,7 +1,7 @@
 # UI
 node_modules
 build
-public/*
+dist
 STATIC_BUILD
 *.map
 *.log
