@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1698333117022" clover="3.2.0">
-  <project timestamp="1698333117023" name="All files">
-    <metrics statements="83" coveredstatements="26" conditionals="28" coveredconditionals="5" methods="22" coveredmethods="7" elements="133" coveredelements="38" complexity="0" loc="83" ncloc="83" packages="1" files="2" classes="2"/>
+<coverage generated="1698333777730" clover="3.2.0">
+  <project timestamp="1698333777731" name="All files">
+    <metrics statements="83" coveredstatements="26" conditionals="28" coveredconditionals="4" methods="22" coveredmethods="7" elements="133" coveredelements="37" complexity="0" loc="83" ncloc="83" packages="1" files="2" classes="2"/>
     <file name="form-validate.ts" path="C:\Users\kev\Documents\work\Projects\interview-test-accessible-form-validation\src\javascript\modules\form-validate.ts">
-      <metrics statements="42" coveredstatements="26" conditionals="14" coveredconditionals="5" methods="12" coveredmethods="7"/>
+      <metrics statements="42" coveredstatements="26" conditionals="14" coveredconditionals="4" methods="12" coveredmethods="7"/>
       <line num="7" count="1" type="stmt"/>
       <line num="8" count="1" type="stmt"/>
       <line num="9" count="1" type="stmt"/>
@@ -21,7 +21,7 @@
       <line num="46" count="1" type="cond" truecount="1" falsecount="1"/>
       <line num="47" count="1" type="stmt"/>
       <line num="50" count="1" type="stmt"/>
-      <line num="51" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="51" count="1" type="cond" truecount="1" falsecount="1"/>
       <line num="52" count="1" type="stmt"/>
       <line num="57" count="1" type="stmt"/>
       <line num="60" count="1" type="stmt"/>
