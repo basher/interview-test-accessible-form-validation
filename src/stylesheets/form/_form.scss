@@ -31,10 +31,26 @@ Dependencies.
     flex-direction: column;
     gap: $gutter-m;
 
+    // Fallback (Safari 12).
+    /* stylelint-disable-next-line order/order */
+    @supports not (gap: 1rem) {
+        > * {
+            margin: calc($gutter-m / 2);
+        }
+    }
+
     &__field {
         display: flex;
         flex-direction: column;
         gap: $gutter-xs;
+
+        // Fallback (Safari 12).
+        /* stylelint-disable-next-line order/order */
+        @supports not (gap: 1rem) {
+            > * {
+                margin: calc($gutter-xs / 2);
+            }
+        }
 
         &:has(:disabled) {
             .label {

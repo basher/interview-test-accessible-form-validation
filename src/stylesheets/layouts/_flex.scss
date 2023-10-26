@@ -22,4 +22,12 @@ Dependencies.
     > * {
         margin: 0;
     }
+
+    // Fallback (Safari 12).
+    /* stylelint-disable-next-line order/order */
+    @supports not (gap: 1rem) {
+        > * {
+            margin: calc($gutter-m / 2);
+        }
+    }
 }

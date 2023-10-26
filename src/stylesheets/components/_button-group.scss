@@ -11,7 +11,11 @@ Dependencies.
     flex-wrap: wrap;
     gap: $gutter-s;
 
-    &--centered {
-        justify-content: center;
+    // Fallback (Safari 12).
+    /* stylelint-disable-next-line order/order */
+    @supports not (gap: 1rem) {
+        > * {
+            margin: calc($gutter-s / 2);
+        }
     }
 }

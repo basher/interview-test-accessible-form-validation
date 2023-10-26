@@ -10,4 +10,12 @@ Dependencies.
     display: flex;
     flex-direction: column;
     gap: $gutter-s;
+
+    // Fallback (Safari 12).
+    /* stylelint-disable-next-line order/order */
+    @supports not (gap: 1rem) {
+        > * {
+            margin: calc($gutter-s / 2);
+        }
+    }
 }
