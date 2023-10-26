@@ -20,7 +20,7 @@ describe('Validate form', () => {
         expect(FormValidate).toHaveBeenCalledTimes(1);
     });
 
-    test('Class should have been called once', () => {
+    test('Invalid input value on form submission', () => {
         new FormValidate(form);
         form.submit();
         const input = form.querySelector('#name') as HTMLInputElement;
