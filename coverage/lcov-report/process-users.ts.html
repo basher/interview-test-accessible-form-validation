@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">36.58% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/41</span>
+                <span class='fraction'>15/41</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">7.14% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/14</span>
+                <span class='fraction'>1/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">60% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>6/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">36.58% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/41</span>
+                <span class='fraction'>15/41</span>
             </div>
         
             
@@ -176,44 +176,44 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -282,45 +282,45 @@
     private formDataContainer: HTMLTableSectionElement | null;
     private alert: HTMLDivElement | null;
 &nbsp;
-<span class="fstat-no" title="function not covered" >    co</span>nstructor(form: HTMLFormElement) {
-<span class="cstat-no" title="statement not covered" >        this.form = form;</span>
-<span class="cstat-no" title="statement not covered" >        this.formDataContainer = document.querySelector(</span>
+    constructor(form: HTMLFormElement) {
+        this.form = form;
+        this.formDataContainer = document.querySelector(
             '[data-target="process-users"]',
         );
-<span class="cstat-no" title="statement not covered" >        this.alert = document.querySelector('[data-alert="process-users"]');</span>
+        this.alert = document.querySelector('[data-alert="process-users"]');
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        this.init();</span>
+        this.init();
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    pu</span>blic static start(): void {
-        const forms = <span class="cstat-no" title="statement not covered" >document.querySelectorAll(</span>
+    public static start(): void {
+        const forms = document.querySelectorAll(
             '[data-action="process-users"]',
         );
 &nbsp;
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-<span class="cstat-no" title="statement not covered" >        [...(forms as any)].forEach(<span class="fstat-no" title="function not covered" >(f</span>orm) =&gt; {</span>
-            const instance = <span class="cstat-no" title="statement not covered" >new ProcessUsers(form);</span>
-<span class="cstat-no" title="statement not covered" >            return instance;</span>
+        [...(forms as any)].forEach((form) =&gt; {
+            const instance = new ProcessUsers(form);
+            return instance;
         });
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    pr</span>ivate init(): void {
-<span class="cstat-no" title="statement not covered" >        this.form.addEventListener('submit', <span class="fstat-no" title="function not covered" >(e</span>: SubmitEvent) =&gt;</span>
-<span class="cstat-no" title="statement not covered" >            this.handleSubmit(e),</span>
+    private init(): void {
+        this.form.addEventListener('submit', (e: SubmitEvent) =&gt;
+            this.handleSubmit(e),
         );
-<span class="cstat-no" title="statement not covered" >        this.form.addEventListener('formdata', <span class="fstat-no" title="function not covered" >(e</span>: FormDataEvent) =&gt;</span>
+        this.form.addEventListener('formdata', <span class="fstat-no" title="function not covered" >(e</span>: FormDataEvent) =&gt;
 <span class="cstat-no" title="statement not covered" >            this.handleFormData(e),</span>
         );
-<span class="cstat-no" title="statement not covered" >        document.addEventListener('click', <span class="fstat-no" title="function not covered" >(e</span>: MouseEvent) =&gt; {</span>
+        document.addEventListener('click', <span class="fstat-no" title="function not covered" >(e</span>: MouseEvent) =&gt; {
 <span class="cstat-no" title="statement not covered" >            this.handleClick(e);</span>
         });
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    pr</span>ivate handleSubmit(e: SubmitEvent): void {
-<span class="cstat-no" title="statement not covered" >        e.preventDefault();</span>
+    private handleSubmit(e: SubmitEvent): void {
+        e.preventDefault();
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (this.form.checkValidity()) {</span>
-<span class="cstat-no" title="statement not covered" >            new FormData(this.form);</span>
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (this.form.checkValidity()) {
+            new FormData(this.form);
         }
     }
 &nbsp;
@@ -391,7 +391,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-10-27T11:12:05.270Z
+                at 2023-10-27T12:43:40.633Z
             </div>
         <script src="prettify.js"></script>
         <script>
