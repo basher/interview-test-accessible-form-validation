@@ -3,20 +3,16 @@ import ProcessUsers from './process-users';
 describe('Process users', () => {
     document.body.innerHTML = `
         <form data-module="form-validate" data-action="process-users">
-            <div class="form__field">
-                <label for="name">Name</label>
-                <input type="text" id="name" value="test" required />
-            </div>
-            <div class="form__field">
-                <label for="dob-month">Month</label>
-                <select id="dob-month" required>
-                    <option value="January">January</option>
-                </select>
-            </div>
-            <div class="form__field">
-                <label for="dob-year">Year</label>
-                <input type="number" id="dob-year" value="2000" required>
-            </div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" value="test" required />
+
+            <label for="dob-month">Month</label>
+            <select id="dob-month" name="dob-month" required>
+                <option value="January">January</option>
+            </select>
+
+            <label for="dob-year">Year</label>
+            <input type="number" id="dob-year" name="dob-year" value="2000" required>
         </form>
 
         <table>
@@ -39,6 +35,6 @@ describe('Process users', () => {
 
     test('Form submits valid data', () => {
         form.submit();
-        expect(form.checkValidity()).toBeTruthy();
+        expect(form.checkValidity()).toBe(true);
     });
 });
