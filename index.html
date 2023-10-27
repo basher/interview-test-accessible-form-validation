@@ -226,7 +226,7 @@
                     <li>Unfortunately, Safari 12 could not be fully tested using trial versions of the BrowserStackLocal desktop app, or LambdaTest tunnel for localhost websites.</li>
                     <li>Either access to localhost could not be established at all, or the trial expired or timed out before testing was completed.</li>
                     <li>I was able to confirm that the form validation / error handling worked OK, but nothing more.</li>
-                    <li>NOTE: The JS / CSS APIs that I've used have either been polyfilled (e.g. "postcss-clamp", "postcss-logical", flexbox "gap"), or are fully supported already.</li>
+                    <li>NOTE: The JS / CSS APIs that I've used have either been polyfilled (e.g. "postcss-clamp", "postcss-logical", flexbox "gap"), or are fully supported according to Caniuse / MDN docs.</li>
                 </ul>
 
                 <h3>Accessibility considerations</h3>
@@ -242,6 +242,11 @@
                 <ul>
                     <li>Fluid typography and spacing has been implemented, leveraging the CSS "clamp()" function.</li>
                     <li>The table is scrollable if the viewport is too narrow.</li>
+                </ul>
+
+                <h3>Test coverage</h3>
+                <ul>
+                    <li>Unfortunately, I've been unable to achieve 100% coverage.</li>
                 </ul>
             </div>
         </main>

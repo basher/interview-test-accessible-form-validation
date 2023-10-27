@@ -2,9 +2,11 @@
 node_modules
 build
 dist
-STATIC_BUILD
 *.map
 *.log
 
 # Parcel bundler
 .parcel-cache
+
+# Tests
+coverage
