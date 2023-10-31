@@ -3,6 +3,7 @@
         "strict": true,
         "allowSyntheticDefaultImports": true,
         "forceConsistentCasingInFileNames": true,
+        "target": "es2015",
     },
     "include": [
         "src/javascript/**/*",

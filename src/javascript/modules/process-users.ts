@@ -29,9 +29,6 @@ export default class ProcessUsers {
         this.form.addEventListener('submit', (e: SubmitEvent) =>
             this.handleSubmit(e),
         );
-        this.form.addEventListener('formdata', (e: FormDataEvent) =>
-            this.handleFormData(e),
-        );
         document.addEventListener('click', (e: MouseEvent) => {
             this.handleClick(e);
         });
@@ -41,17 +38,18 @@ export default class ProcessUsers {
         e.preventDefault();
 
         if (this.form.checkValidity()) {
-            new FormData(this.form);
+            const formData = new FormData(this.form);
+            this.handleFormData(formData);
         }
     }
 
-    private handleFormData(e: FormDataEvent): void {
+    private handleFormData(formData: FormData): void {
         const tr = document.createElement('tr');
 
         if (this.formDataContainer) {
             let dob = '';
 
-            for (const entry of e.formData.entries()) {
+            for (const entry of formData.entries()) {
                 // Combine 3 date of birth entries into 1 string.
                 switch (entry[0]) {
                     case 'dob-day':
